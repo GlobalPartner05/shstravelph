@@ -1,0 +1,46 @@
+{
+  "name": "sakurahire-ph",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev --port 3001",
+    "build": "vite build",
+    "start": "vite preview",
+    "deploy": "vinext-cloudflare deploy",
+    "lint": "eslint",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@vinext/cloudflare": "^1.1.1",
+    "drizzle-orm": "^1.0.0-beta.22",
+    "lucide-react": "^1.17.0",
+    "next": "^16.4.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-server-dom-webpack": "^19.3.1",
+    "vinext": "^1.2.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^2.0.0-beta.v.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.2",
+    "@vitejs/plugin-rsc": "^0.5.38",
+    "cf": "^1.0.0-beta.18",
+    "drizzle-kit": "^1.0.0-beta.22",
+    "eslint": "^9",
+    "eslint-config-next": "^16.4.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^8.3.0"
+  },
+  "type": "module",
+  "allowScripts": {
+    "esbuild@0.25.12": true,
+    "unrs-resolver@1.12.2": true,
+    "workerd@1.20261012.1": true
+  }
+}

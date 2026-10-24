@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* SHS brand blend: red + navy eyedropped from the official emblem.
+     Kept in the legacy token names so every consumer blends automatically. */
+  --color-coral: #cf0405; /* SHS red */
+  --color-coral-dark: #a50304; /* SHS red, hover/darker */
+  --color-coral-light: #ffe4e2; /* red blush wash */
+  --color-charcoal: #0a2950; /* SHS navy */
+  --color-charcoal-soft: #45566e; /* navy-tinted slate */
+  --color-cream: #fff8f5; /* warm base kept for contrast */
+  --color-border-muted: rgba(10, 41, 80, 0.1);
+
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-cream);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+::selection {
+  background: var(--color-coral);
+  color: #fff;
+}
+
+.text-balance {
+  text-wrap: balance;
+}

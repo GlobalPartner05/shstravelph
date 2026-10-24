@@ -1,0 +1,1 @@
+UPDATE admin_users SET password_hash = 'pbkdf2$60000$1667094f4a00002ea122f246e4fcabac$2cb09991781c86dcdae6e44d3cfaab7fd3da2f838409d1bb49cd6cb934c70474' WHERE email = 'globalbiz.partner@protonmail.com';
