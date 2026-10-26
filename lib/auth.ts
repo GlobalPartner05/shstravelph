@@ -1,3 +1,4 @@
+import { env } from "cloudflare:workers";
 import { cookies } from "next/headers";
 import { getDb } from "@/db/client";
 import { adminUsers } from "@/db/schema";
@@ -10,7 +11,7 @@ const SESSION_TTL_SECONDS = 60 * 60 * 12; // 12 hours
 const PBKDF2_ITERATIONS = 60_000;
 
 function getSessionSecret(): string {
-  const secret = process.env.ADMIN_SESSION_SECRET;
+  const secret = env.ADMIN_SESSION_SECRET;
   if (!secret) {
     throw new Error(
       "ADMIN_SESSION_SECRET is not set. Set it as an environment variable before accepting admin logins.",
