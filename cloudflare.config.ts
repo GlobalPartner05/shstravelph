@@ -13,6 +13,7 @@ export default defineConfig({
     },
     env: {
       ASSETS: bindings.assets(),
+      ADMIN_SESSION_SECRET: bindings.secret(),
       DB: bindings.d1({
         id: "49594773-5f37-4d0c-906d-3e8d519e1410",
         name: "sakurahire-ph",
