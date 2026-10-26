@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-// Creates (or updates) the first admin login for local development.
+// Generate a PBKDF2 admin hash compatible with the Workers runtime.
 // Usage: node scripts/seed-admin.mjs <email> <password>
-// Then apply the printed SQL
-//   as a new migration under netlify/database/migrations/ (or locally via
-//   `netlify database connect --query "<printed SQL>"`)
+// Apply the resulting SQL with the local setup or D1 query command.
 
 const [, , email, password] = process.argv;
 
@@ -12,7 +10,7 @@ if (!email || !password) {
   process.exit(1);
 }
 
-const PBKDF2_ITERATIONS = 150_000;
+const PBKDF2_ITERATIONS = 60_000;
 
 function toHex(buffer) {
   return Array.from(new Uint8Array(buffer), (b) => b.toString(16).padStart(2, "0")).join("");
