@@ -8,7 +8,7 @@ import { sqliteTable, text, integer, real } from "drizzle-orm/sqlite-core";
 // with `new Date().toISOString()`, so string comparison and sorting stay correct.
 const isoNow = sql`(strftime('%Y-%m-%dT%H:%M:%fZ','now'))`;
 
-const idCol = () => integer("id").primaryKey({ autoincrement: true });
+const idCol = () => integer("id").primaryKey({ autoIncrement: true });
 const boolCol = (name: string, def = false) =>
   integer(name, { mode: "boolean" }).notNull().default(def);
 
