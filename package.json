@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite dev --port 3001",
-    "build": "vite build",
-    "start": "vite preview",
+    "dev": "node scripts/runtime.mjs dev",
+    "build": "node scripts/runtime.mjs build",
+    "start": "node scripts/runtime.mjs preview",
     "deploy": "vinext-cloudflare deploy",
     "lint": "eslint",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "setup:local": "node scripts/setup-local.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "@vinext/cloudflare": "^1.1.1",
@@ -33,6 +36,7 @@
     "drizzle-kit": "^1.0.0-beta.22",
     "eslint": "^9",
     "eslint-config-next": "^16.4.1",
+    "miniflare": "^5.20261012.1-beta",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite": "^8.3.0"
